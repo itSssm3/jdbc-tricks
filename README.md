@@ -69,7 +69,20 @@ jdbc-tricks/
 
 #### H2 JDBC Tricks
 
-> TODO
+- 关键字绕过
+  - 反斜杠绕过
+    - [BackslashBypass](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/BackslashBypass.java)
+  - 大小写绕过
+    - [CaseConversionBypass](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/CaseConversionBypass.java)
+  - unicode绕过
+    - [UnicodeBypass](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/UnicodeBypass.java)
+- 特殊fearure
+  - 利用不可见字符代替空格
+    - [NoSpacePoc](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/NoSpacePoc.java)
+  - RUNSCRIPT FROM不出现.sql直接连接ip
+    - [NoSqlSuffix](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/NoSqlSuffix.java)
+  - RUNSCRIPT FROM连接本地文件
+    - [ConnectToLocalFiles](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/ConnectToLocalFiles.java)
 
 ## 🔥 真实世界漏洞案例
 
@@ -78,6 +91,10 @@ jdbc-tricks/
 
 - 2025-04-20 L0ne1y 贡献案例集
   [real-world-case/2025-04-20-L0ne1y](real-world-case/2025-04-20-L0ne1y)
+  
+- 2025-06-23 fushuling 贡献案例集
+
+  [real-world-case/2025-06-23-fushuling](real-world-case/2025-06-23-fushuling)
 
 ## 其他优秀的开源JDBC 项目
 

@@ -65,7 +65,22 @@ Non-conference public content:
 
 ### Other Driver Tricks
 
-> TODO
+#### H2 JDBC Tricks
+
+- Keyword bypass
+  - Backslash bypass
+    - [BackslashBypass](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/BackslashBypass.java)
+  - Case bypass
+    - [CaseConversionBypass](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/CaseConversionBypass.java)
+  - Unicode bypass
+    - [UnicodeBypass](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/UnicodeBypass.java)
+- Special fearure
+  - Using invisible characters to replace spaces
+    - [NoSpacePoc](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/NoSpacePoc.java)
+  - RUNSCRIPT FROM without .sql and connect directly to the IP address
+    - [NoSqlSuffix](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/NoSqlSuffix.java)
+  - RUNSCRIPT FROM connect to local file
+    - [ConnectToLocalFiles](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/ConnectToLocalFiles.java)
 
 ## 🔥 Real-World Vulnerability Cases
 
@@ -74,6 +89,10 @@ Case outline:
 
 - 2025-04-20 L0ne1y contributed case collection
   [real-world-case/2025-04-20-L0ne1y](real-world-case/2025-04-20-L0ne1y)
+  
+- 2025-06-23 fushuling contributed case collection
+  
+  [real-world-case/2025-06-23-fushuling](real-world-case/2025-06-23-fushuling)
 
 ## Other Excellent Open-source JDBC Projects
 
