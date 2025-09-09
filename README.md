@@ -83,6 +83,8 @@ jdbc-tricks/
     - [NoSqlSuffix](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/NoSqlSuffix.java)
   - RUNSCRIPT FROM连接本地文件
     - [ConnectToLocalFiles](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/ConnectToLocalFiles.java)
+  - 不出网poc自动生成脚本
+    - [NoNetworkConversion](jdbc-test-case/h2-driver/NoNetworkConversion/)
 
 ## 🔥 真实世界漏洞案例
 
