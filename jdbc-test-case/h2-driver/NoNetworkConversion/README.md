@@ -9,4 +9,4 @@ python NoNetworkConversion.py <本地sql文件路径> <远程环境写入sql文�
 python NoNetworkConversion.py "./poc.sql" "D:/test/aaa"
 ```
 
-实际案例可参考：[h2 jdbc不出网poc自动生成](./h2 jdbc不出网poc自动生成.pdf)
+实际案例可参考：h2 jdbc不出网poc自动生成.pdf
