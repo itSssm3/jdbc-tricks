@@ -81,6 +81,8 @@ Non-conference public content:
     - [NoSqlSuffix](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/NoSqlSuffix.java)
   - RUNSCRIPT FROM connect to local file
     - [ConnectToLocalFiles](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/ConnectToLocalFiles.java)
+  - No network poc automatically generates script
+    - [NoNetworkConversion](jdbc-test-case/h2-driver/NoNetworkConversion/)
 
 ## 🔥 Real-World Vulnerability Cases
 
