@@ -18,8 +18,15 @@ Presentation PPT attachment:
 jdbc-tricks/
 ├── LICENSE
 ├── README.md
-├── dump-mysql-properties/ MySQL driver default security property analysis
-├── jdbc-test-case/ # JDBC test case collection
+├── dump-mysql-properties/        # MySQL driver default security property analysis
+├── jdbc-test-case/               # JDBC test case collection
+│   ├── mysql-driver/             # MySQL Driver default properties and bypass techniques for different versions
+│   ├── h2-driver/                # H2 JDBC special URL construction and non-networked exploitation
+│   ├── postgreSQL-driver/        # PostgreSQL JDBC PoCs and exploitation tests
+│   ├── jaas4jdbc/                # JDBC attack surface leveraging JAAS
+│   └── utils/                    # Common utility classes (e.g., MysqlConnectionUtils)
+├── jdbc-url-fuzzer/              # JDBC URL fuzzing framework
+├── real-world-case/              # Collection of real-world vulnerability cases
 ```
 
 ## 🔍 Tricks List
@@ -44,6 +51,8 @@ Conference public content:
 
 - no-outbound: jdbc non-networked exploitation
     - [no-outbound/README.md](jdbc-test-case/mysql-driver/no-outbound/README.md)
+- no-outbound-spring: jdbc non-networked exploitation in Spring environments
+    - [no-outbound-spring/README.md](jdbc-test-case/mysql-driver/no-outbound-spring/README.md)
 - multi-host and equalsIgnoreCase bypass
     - [AllowLoadLocal_MultiHost_equalsIgnoreCase_bypass](jdbc-test-case/mysql-driver/version8/src/main/java/com/jdbc/tricks/multi_host/AllowLoadLocal_MultiHost_equalsIgnoreCase_bypass.java)
     - [equalsIgnoreCase bypass key fuzz case](jdbc-test-case/mysql-driver/version8/src/main/java/com/jdbc/tricks/multi_host/fuzzCase1.java)
@@ -83,6 +92,23 @@ Non-conference public content:
     - [ConnectToLocalFiles](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/ConnectToLocalFiles.java)
   - No network poc automatically generates script
     - [NoNetworkConversion](jdbc-test-case/h2-driver/NoNetworkConversion/)
+
+#### PostgreSQL JDBC Tricks
+
+- JAAS PoC example
+  - [App.java](jdbc-test-case/postgreSQL-driver/src/main/java/com/jdbc/tricks/App.java)
+
+#### JAAS for JDBC Tricks
+
+- Databricks JDBC JAAS exploitation example
+  - [Databricks.java](jdbc-test-case/jaas4jdbc/src/main/java/databricks/Databricks.java)
+- Impala JDBC JAAS exploitation example
+  - [Impala.java](jdbc-test-case/jaas4jdbc/src/main/java/impala/Impala.java)
+
+#### JDBC Utils
+
+- MySQL connection utility class (helps construct and reuse PoCs)
+  - [MysqlConnectionUtils.java](jdbc-test-case/utils/src/main/java/com/jdbc/tricks/utils/MysqlConnectionUtils.java)
 
 ## 🔥 Real-World Vulnerability Cases
 

@@ -19,8 +19,15 @@
 jdbc-tricks/
 ├── LICENSE
 ├── README.md
-├── dump-mysql-properties/ mysql驱动默认安全属性分析
-├── jdbc-test-case/ # JDBC测试用例集合
+├── dump-mysql-properties/        # MySQL 驱动默认安全属性分析
+├── jdbc-test-case/               # JDBC 测试用例集合
+│   ├── mysql-driver/             # MySQL Driver 各版本默认属性与绕过技巧
+│   ├── h2-driver/                # H2 JDBC 特殊 URL 构造与不出网利用
+│   ├── postgreSQL-driver/        # PostgreSQL JDBC PoC 与利用测试
+│   ├── jaas4jdbc/                # 利用 JAAS 机制的 JDBC 攻击面
+│   └── utils/                    # 公共工具类（如 MysqlConnectionUtils）
+├── jdbc-url-fuzzer/              # JDBC URL Fuzzing 测试框架
+├── real-world-case/              # 真实世界漏洞案例集合
 ```
 
 ## 🔍 Tricks 列表
@@ -85,6 +92,23 @@ jdbc-tricks/
     - [ConnectToLocalFiles](jdbc-test-case/h2-driver/src/main/java/com/jdbc/tricks/ConnectToLocalFiles.java)
   - 不出网poc自动生成脚本
     - [NoNetworkConversion](jdbc-test-case/h2-driver/NoNetworkConversion/)
+
+#### PostgreSQL JDBC Tricks
+
+- Jaas PoC 示例
+  - [App.java](jdbc-test-case/postgreSQL-driver/src/main/java/com/jdbc/tricks/App.java)
+
+#### JAAS for JDBC Tricks
+
+- Databricks JDBC JAAS 利用示例
+  - [Databricks.java](jdbc-test-case/jaas4jdbc/src/main/java/databricks/Databricks.java)
+- Impala JDBC JAAS 利用示例
+  - [Impala.java](jdbc-test-case/jaas4jdbc/src/main/java/impala/Impala.java)
+
+#### JDBC Utils
+
+- MySQL 连接工具类（辅助构造与复用 PoC）
+  - [MysqlConnectionUtils.java](jdbc-test-case/utils/src/main/java/com/jdbc/tricks/utils/MysqlConnectionUtils.java)
 
 ## 🔥 真实世界漏洞案例
 
