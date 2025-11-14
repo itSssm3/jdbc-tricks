@@ -7,10 +7,10 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jaas</artifactId>
+    <artifactId>jaas4jdbc</artifactId>
     <packaging>jar</packaging>
 
-    <name>jaas</name>
+    <name>jaas4jdbc</name>
     <url>http://maven.apache.org</url>
 
     <properties>

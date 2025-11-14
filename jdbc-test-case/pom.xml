@@ -16,6 +16,7 @@
         <module>mysql-driver/no-outbound-spring</module>
         <module>postgreSQL-driver</module>
         <module>h2-driver</module>
+        <module>jaas4jdbc</module>
     </modules>
 
     <properties>
